@@ -8,7 +8,7 @@ IP = sys.argv[1]
 PORT = 5002
 
 #打开序列号配置文件，读取序列号。初始时，此序列号为0，程序运行后，会写入序列号。当程序意外推出，再运行时，可以读取序列号继续进行
-c=open("config-tcp.txt",'r')
+c=open("/root/config-tcp.txt",'r')
 c_data=c.readline()
 c.close()
 if c_data == '0':
@@ -43,7 +43,7 @@ while True:
     f.close()
 
     #写序列号到配置文件
-    g=open("config-tcp.txt",'w+')
+    g=open("/root/config-tcp.txt",'w+')
     g.write(str(n))
     g.close()
 

@@ -1,0 +1,10 @@
+[Unit]
+Description=kc-server
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sh /root/kc-server.sh
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
